@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.link {
+  position: relative;
+  text-decoration: none;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially, set width to 0 */
+  height: 2px; /* Set underline height */
+  background-color: #121212; /* Set underline color */
+  transition: width 0.3s; /* Apply transition effect to width */
+}
+
+.link:hover::before {
+  width: 100%; /* On hover, expand the width to 100% */
+}
